@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ejercicio2_3PMO2.Views.ListAudio">
+    <ContentPage.Content>
+        <StackLayout >
+            <CollectionView x:Name="ListaAudio" SelectionMode="Single">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Horizontal" Span="5"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BackgroundColor="#5C9454" BorderColor="Gray" CornerRadius="10" Margin="10" Padding="10">
+                            <SwipeView x:Name="ListaAudio">
+                                <SwipeView.LeftItems>
+                                    <SwipeItems>
+                                        <SwipeItem Text="Reproducir"
+                                       IconImageSource="play.png"
+                                       BackgroundColor="LightGreen"
+                                       Invoked="SwipeItem_Invoked" />
+                                    </SwipeItems>
+                                </SwipeView.LeftItems>
+                                <Grid BackgroundColor="LightGray">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition  Width="*"/>
+                                        <ColumnDefinition  Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Margin="20" Grid.Column="0" Grid.Row="0" Text="{Binding id}" TextColor="Black"/>
+                                    <Label Margin="10,10,0,10" Grid.Column="0" Grid.Row="1" Text="{Binding descripcion}"  TextColor="Black"/>
+                                    <Label Text="{Binding path}" IsVisible="False" TextColor="Black"/>
+                                    <DatePicker Margin="10" Grid.Column="1" Date="{Binding fecha}" IsEnabled="false" TextColor="Black"/>
+                                </Grid>
+                            </SwipeView>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

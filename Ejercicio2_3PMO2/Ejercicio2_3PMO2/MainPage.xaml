@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ejercicio2_3PMO2.MainPage">
+    <StackLayout >
+        <StackLayout BackgroundColor = "Aqua"  HeightRequest ="50" Orientation = "Horizontal">
+           
+            <Label Text = "Ejercicio 2.3 Grupal" Margin="100,0,0,0"
+                    TextColor = "Black" FontSize = "18" VerticalTextAlignment  = "Center"/>
+        </StackLayout>
+        <Label x:Name="lblinfo" Text="Grabar Audios" FontSize = "21" HorizontalOptions="Center"/>
+        <StackLayout HorizontalOptions="Center">
+            <StackLayout >
+                <StackLayout Orientation = "Horizontal" >
+                    <Label x:Name="lblMinutes" Text="00" FontSize = "90" FontAttributes="Bold" />
+                    <Label Text=":" FontSize = "80" FontAttributes="Bold"/>
+                    <Label x:Name="lblSeconds" Text="00" FontSize = "90" FontAttributes="Bold" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Label Text="Detectar silencio:" FontSize = "21"/>
+                    <Switch x:Name="IsSilence" IsToggled = "true" />
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+        <FlexLayout JustifyContent="SpaceAround">
+            <Button x:Name="bntRecord" CornerRadius="20" Text = "Grabar" BackgroundColor="#7cbb45" WidthRequest="120" Clicked="bntRecord_Clicked"/>
+            <Button x:Name="bntStop" CornerRadius="20" Text = "Detener" BackgroundColor="Silver"  WidthRequest="120"  Clicked="bntStop_Clicked" IsEnabled= "False"/>
+            <Button x:Name="bntPlay" CornerRadius="20" Text = "Play" BackgroundColor="Silver"  WidthRequest="120" Clicked="bntPlay_Clicked" 
+                    FontSize="20" IsEnabled= "False"/>
+        </FlexLayout>
+        <Frame BorderColor="Black" CornerRadius="20" BackgroundColor="Aqua" Margin="10">
+            <Entry x:Name="txtdescricion" WidthRequest="600" BackgroundColor="Aqua" HorizontalOptions="CenterAndExpand" 
+                   TextColor="Black" Placeholder="Ingrese una descripción" IsEnabled="False" PlaceholderColor="#2A2A2A"/>
+        </Frame>
+        <Button x:Name="btnsaveSQLite" Text="Guarda a SQLite" TextColor="Black" BackgroundColor="Aqua" Clicked="btnsaveSQLite_Clicked" IsEnabled="False" Margin="30,10,30,0" CornerRadius="10"/>
+        <Button x:Name="bntLista" Text = "Lista de Audios" BackgroundColor="Aqua" 
+                Clicked="bntLista_Clicked" IsEnabled= "true" Margin="30,10,30,0" CornerRadius="10"/>
+    </StackLayout>
+
+</ContentPage>
