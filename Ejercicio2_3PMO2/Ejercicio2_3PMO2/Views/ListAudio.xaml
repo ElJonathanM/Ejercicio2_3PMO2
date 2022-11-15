@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Ejercicio2_3PMO2.Views.ListAudio">
+             x:Class="Ejercicio2_3PMO2.Views.ListAudio"
+             BackgroundImageSource="Pantallaa.jpg">
     <ContentPage.Content>
         <StackLayout >
             <CollectionView x:Name="ListaAudio" SelectionMode="Single">
@@ -10,7 +11,7 @@
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Frame BackgroundColor="#5C9454" BorderColor="Gray" CornerRadius="10" Margin="10" Padding="10">
+                        <Frame BackgroundColor="#D797B1" BorderColor="#D797B1" CornerRadius="20" Margin="150,0,20,0" Padding="10">
                             <SwipeView x:Name="ListaAudio">
                                 <SwipeView.LeftItems>
                                     <SwipeItems>
@@ -20,7 +21,7 @@
                                        Invoked="SwipeItem_Invoked" />
                                     </SwipeItems>
                                 </SwipeView.LeftItems>
-                                <Grid BackgroundColor="LightGray">
+                                <Grid BackgroundColor="FloralWhite">
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="Auto"/>
                                         <RowDefinition Height="Auto"/>
