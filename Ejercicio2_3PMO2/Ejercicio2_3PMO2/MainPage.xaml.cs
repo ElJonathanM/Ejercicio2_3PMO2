@@ -147,7 +147,7 @@ namespace Ejercicio2_3PMO2
         {
             if (string.IsNullOrEmpty(txtdescricion.Text))
             {
-                await DisplayAlert("ALERTA", "DEBES RELLENAR EL CAMPO DE DESCRIPCION PARA GUARDAR TU AUDIO!", "OK");
+                await DisplayAlert("ALERTA", "DEBES INGRESAR UNA DESCRIPCION PARA GUARDAR TU AUDIO!", "OK");
             }
             else
             {
