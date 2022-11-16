@@ -13,12 +13,12 @@
         <StackLayout HorizontalOptions="Center">
             <StackLayout >
                 <StackLayout Orientation = "Horizontal" >
-                    <Label x:Name="lblMinutes" Text="00" FontSize = "90" FontAttributes="Bold" />
-                    <Label Text=":" FontSize = "80" FontAttributes="Bold"/>
-                    <Label x:Name="lblSeconds" Text="00" FontSize = "90" FontAttributes="Bold" />
+                    <Label x:Name="lblMinutes" Text="00" FontSize = "90" FontAttributes="Bold" TextColor = "AntiqueWhite"/>
+                    <Label Text=":" FontSize = "80" FontAttributes="Bold" TextColor = "AntiqueWhite"/>
+                    <Label x:Name="lblSeconds" Text="00" FontSize = "90" FontAttributes="Bold" TextColor = "AntiqueWhite"/>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                    <Label Text="Detectar silencio:" FontSize = "21"/>
+                    <Label Text="Detectar silencio:" FontSize = "21" TextColor = "AntiqueWhite"/>
                     <Switch x:Name="IsSilence" IsToggled = "true" />
                 </StackLayout>
             </StackLayout>
@@ -34,7 +34,7 @@
                    TextColor="Black" Placeholder="Ingrese una descripción" IsEnabled="False" PlaceholderColor="#2A2A2A" />
         </Frame>
         <Button x:Name="btnsaveSQLite" Text="Guarda a SQLite" TextColor="Black" BackgroundColor="#D797B1" 
-                Clicked="btnsaveSQLite_Clicked" IsEnabled="False" Margin="90,160,90,0" CornerRadius="10"/>
+                Clicked="btnsaveSQLite_Clicked" IsEnabled="False" Margin="90,100,90,0" CornerRadius="10"/>
         <Button x:Name="bntLista" Text = "Lista de Audios" BackgroundColor="#FBBC9B" 
                 Clicked="bntLista_Clicked" IsEnabled= "true" Margin="90,20,90,0" CornerRadius="10"/>
     </StackLayout>

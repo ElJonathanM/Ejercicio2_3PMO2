@@ -4,14 +4,14 @@
              x:Class="Ejercicio2_3PMO2.Views.ListAudio"
              BackgroundImageSource="Pantallaa.jpg">
     <ContentPage.Content>
-        <StackLayout >
+        <StackLayout Margin="5">
             <CollectionView x:Name="ListaAudio" SelectionMode="Single">
                 <CollectionView.ItemsLayout>
                     <GridItemsLayout Orientation="Horizontal" Span="5"/>
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Frame BackgroundColor="#D797B1" BorderColor="#D797B1" CornerRadius="20" Margin="150,0,20,0" Padding="10">
+                        <Frame BackgroundColor="#D797B1" BorderColor="#D797B1" CornerRadius="20" Margin="115,0,20,0" Padding="10">
                             <SwipeView x:Name="ListaAudio">
                                 <SwipeView.LeftItems>
                                     <SwipeItems>

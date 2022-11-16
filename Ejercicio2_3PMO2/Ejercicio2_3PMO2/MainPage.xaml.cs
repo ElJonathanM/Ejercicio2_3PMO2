@@ -66,7 +66,7 @@ namespace Ejercicio2_3PMO2
                 //DETECTA LO DEL SILECIO
                 recorder.StopRecordingOnSilence = IsSilence.IsToggled;
                 var audioRecordTask = await recorder.StartRecording();
-                lblinfo.Text = "GRABANDO";
+                lblinfo.Text = "Grabando";
 
                 bntRecord.IsEnabled = false;
                 bntRecord.BackgroundColor = Color.Silver;
@@ -114,7 +114,7 @@ namespace Ejercicio2_3PMO2
                 {
                     StopRecording();
                     await CrossMediaManager.Current.Play(fileName);
-                    lblinfo.Text = "REPRODUCIENDO";
+                    lblinfo.Text = "Reproduciendo";
                     seReprodujo = true;
                     //--TIMER DE REPRODUCCION
                     seconds = 0;
@@ -147,7 +147,7 @@ namespace Ejercicio2_3PMO2
         {
             if (string.IsNullOrEmpty(txtdescricion.Text))
             {
-                await DisplayAlert("ALERTA", "DEBES INGRESAR UNA DESCRIPCION PARA GUARDAR TU AUDIO!", "OK");
+                await DisplayAlert("Alerta", "Debes ingresar una descripción para guardar audio!", "OK");
             }
             else
             {
@@ -208,7 +208,7 @@ namespace Ejercicio2_3PMO2
                     }
                     else
                     {
-                        await DisplayAlert("ERROR", "Ocurrio un error al guardar!! en\n" + mic.path, "OK");
+                        await DisplayAlert("Error", "Ocurrio un error al guardar!! en\n" + mic.path, "OK");
                     }
                 }
             }
@@ -217,7 +217,7 @@ namespace Ejercicio2_3PMO2
         private async void bntLista_Clicked(object sender, EventArgs e)
         {
             var newpage = new ListAudio();
-            newpage.Title = "LISTADO DE AUDIOS";
+            newpage.Title = "LISTA DE AUDIOS";
             await Navigation.PushAsync(newpage);
         }
 
@@ -244,7 +244,7 @@ namespace Ejercicio2_3PMO2
             bntStop.BackgroundColor = Color.Silver;
             lblSeconds.Text = "00";
             lblMinutes.Text = "00";
-            lblinfo.Text = "LISTO GRABAR";
+            lblinfo.Text = "Listo Grabar";
             txtdescricion.IsEnabled = true;
             btnsaveSQLite.IsEnabled = true;
             bntLista.IsEnabled = true;
